@@ -1,12 +1,46 @@
-# React + Vite
+# React + Vite Tayin Talep Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, React ve Vite kullanılarak geliştirilmiş bir tayin talep uygulamasıdır. Kullanıcılar sicil numarası ve parola ile giriş yaparak tayin talep işlemlerini gerçekleştirebilir.
 
-Currently, two official plugins are available:
+## 🚀 Özellikler
+- Sicil numarası (6 karakter) ve parola ile kullanıcı girişi
+- Giriş sonrası tayin talep ekranına yönlendirme
+- Personel bilgilerini gösterme
+- 81 ili listeleme
+- Tayin talebinin oluşturulması
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Gereksinimler
+- Node.js (>= 16)
+- npm veya yarn
+- Tayin Planı Backend Servisi (çalışır durumda olmalıdır)
 
-## Expanding the ESLint configuration
+## 🔧 Kurulum
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Depoyu klonlayın:
+```
+git clone https://github.com/RBRxzl/tayin_talep_project_app.git
+cd tayintalep-app
+
+npm install
+# veya
+yarn install
+
+npm run dev
+# veya
+yarn dev
+
+🧪 Kullanılan Teknolojiler
+React
+
+Vite
+
+React Router
+
+Axios
+
+ESLint
+
+📌 Notlar
+Projeyi çalıştırmadan önce backend servisini başlattığınızdan emin olun.
+
+Giriş ekranı yalnızca geçerli sicil numarası ve parola ile erişim sağlar.
