@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import '../styles/LoginForm.css';
 import bakanlikLogo from '../assets/bakanlik_logo.png';
 import { login } from '../api/auth';
-import { saveToken, saveSicilNo } from '../utils/storage';
 import { useNavigate } from 'react-router-dom';
 
 
 
 function LoginForm() {
-      const navigate = useNavigate(); // yönlendirme hook'u
+      const navigate = useNavigate(); 
 
     const [sicilNo, setSicilno] = useState('');
     const [password, setPassword] = useState('');
@@ -22,10 +21,7 @@ function LoginForm() {
 
     try {
       const data = await login(sicilNo, password);
-      saveToken(data.tokenType, data.accessToken);
-      saveSicilNo(data.id);
-      alert(`Hoşgeldin, ${data.sicilNo}!`);
-      navigate('/tayin-talebi'); // yönlendirme
+      navigate('/tayin-talebi'); 
     } catch (err) {
       setError('Giriş başarısız. Kullanıcı adı veya şifre yanlış.');
     }

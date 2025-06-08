@@ -1,25 +1,3 @@
-/* import React from 'react';
-import LoginForm from './components/LoginForm';
-
-function App() {
-  return (
-    <div 
-      style={{
-        height: '100vh', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center',
-        backgroundColor: '#f8f9fa' 
-      }}
-    >
-      <LoginForm />
-    </div>
-  );
-}
-
-export default App; */
-
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
@@ -42,7 +20,18 @@ function App() {
             <LoginForm />
           </div>
         } />
-        <Route path="/tayin-talebi" element={<TayinTalebiPage />} />
+        <Route path="/tayin-talebi" element={
+           <div
+            style={{
+              height: '100vh',
+              display: 'flex',
+              justifyContent: 'center',
+              backgroundColor: '#f8f9fa'
+            }}
+          >
+            <TayinTalebiPage/>
+          </div>
+          } />
       </Routes>
     </Router>
   );
